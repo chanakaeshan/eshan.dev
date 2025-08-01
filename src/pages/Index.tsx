@@ -26,7 +26,7 @@ const Index = () => {
       >
         {/* Animated Background Particles */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[#0A0A0A]" />
+          <div className="absolute inset-0 bg-[##000000]" />
           {/* Geometric Pattern Overlay */}
           <div className="absolute inset-0 opacity-10">
             {[...Array(20)].map((_, i) => (
