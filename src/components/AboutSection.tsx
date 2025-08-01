@@ -95,7 +95,7 @@ const AboutSection = () => {
             <div className="glass rounded-xl p-8 text-center">
                   <div className="w-48 h-48 mx-auto bg-gradient-to-br from-primary/20 to-[#22c55e]/20 rounded-full flex items-center justify-center mb-6 overflow-hidden">
                     <img
-                      src="/aboutme.png" // Updated profile image URL
+                      src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*syVB660Cf7VgKKUttY8u4Q.png" // Updated profile image URL
                       alt="Chanaka Eshan"
                       className="w-full h-full object-cover"
                     />
