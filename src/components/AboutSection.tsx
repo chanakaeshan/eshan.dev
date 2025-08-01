@@ -9,10 +9,10 @@ const AboutSection = () => {
     { name: "System Architecture", icon: Code2, level: 88 },
   ];
 
-  const technologies = [
-    "Java","C#","Node.js","React", "TypeScript", "Node.js", "Next.js", "Python","MongoDB", "PostgreSQL", "AWS", 
-    "Docker", "Kubernetes", "GraphQL", "Next.js", "React Native", "Go"
-  ];
+  // const technologies = [
+  //   "Java","C#","Node.js","React", "TypeScript", "Node.js", "Next.js", "Python","MongoDB", "PostgreSQL", "AWS", 
+  //   "Docker", "Kubernetes", "GraphQL", "Next.js", "React Native", "Go"
+  // ];
 
   return (
     <section id="about" className="container px-4 py-20 relative bg-black">
@@ -107,7 +107,9 @@ const AboutSection = () => {
 
 
             {/* Technologies */}
-            <div className="glass rounded-xl p-8">
+
+            
+            {/* <div className="glass rounded-xl p-8">
               <h3 className="text-xl font-semibold mb-6">Technologies I Work With</h3>
               <div className="flex flex-wrap gap-3">
                 {technologies.map((tech) => (
@@ -124,7 +126,7 @@ const AboutSection = () => {
                   </motion.span>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </motion.div>

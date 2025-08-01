@@ -10,6 +10,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import TechStack from "@/components/TechStack";
+import Technologies from "@/components/Technologies";
 
 const Index = () => {
   return (
@@ -168,6 +169,9 @@ const Index = () => {
 
       {/* About Section */}
       <AboutSection />
+
+      {/* Technologies */}
+      <Technologies />
 
       {/* Portfolio Section */}
       <PortfolioSection />
