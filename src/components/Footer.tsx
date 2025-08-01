@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail, Code2, Heart } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail, Code2, Heart, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
@@ -37,6 +37,16 @@ const Footer = () => {
                 </a>
 
                 <a
+                  href="https://www.instagram.com/chanakaeshan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="hover:bg-primary/20 hover:text-primary">
+                    <Instagram className="w-4 h-4" />
+                  </Button>
+                </a>
+
+                <a
                   href="https://twitter.com/chanakaeshan"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -46,11 +56,6 @@ const Footer = () => {
                   </Button>
                 </a>
 
-                <a href="mailto:chanueshan291@gmail.com">
-                  <Button variant="ghost" size="icon" className="hover:bg-primary/20 hover:text-primary">
-                    <Mail className="w-4 h-4" />
-                  </Button>
-                </a>
               </div>
 
             </div>
@@ -143,7 +148,7 @@ const Footer = () => {
           <div className="mt-8 pt-8 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-muted-foreground text-center md:text-left">
-                © {new Date().getFullYear()} Chanaka Eshan All rights reserved.
+                © {new Date().getFullYear()} Chanaka Eshan. All rights reserved.
                 {/* using React & TypeScript. */}
               </p>
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
