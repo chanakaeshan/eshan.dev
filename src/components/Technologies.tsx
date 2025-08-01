@@ -20,7 +20,7 @@ const TechStack = () => {
   return (
     <div>
     <h3 className="text-3xl font-semibold mb-6 text-center">
-    <span className="text-green-400">Technologies</span> I Work With
+    <span className="text-green-400">Technologies</span> I work With
     </h3>
   <div className="flex flex-wrap gap-3 justify-center"></div>
   <div className="w-full overflow-hidden py-8 mt-8">
