@@ -23,7 +23,7 @@ const TechStack = () => {
         transition={{
           opacity: { duration: 0.5 },
           x: {
-            duration: 15, // Reduced from 25 to 15 seconds
+            duration: 15,
             repeat: Infinity,
             ease: "linear",
             delay: 0.5
