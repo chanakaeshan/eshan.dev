@@ -22,7 +22,7 @@ const ExperienceSection = () => {
       id: 2,
       title: "Full Stack Developer",
       company: "Detz Global Pvt Ltd.",
-      location: "USA (Remote)",
+      location: "Colombo, Sri Lanka (Remote)",
       duration: "Present",
       type: "Full-time",
       description: [
@@ -39,14 +39,14 @@ const ExperienceSection = () => {
       company: "Freelancer",
       location: "Remote",
       duration: "2021 - Present",
-      type: "Contract",
+      type: "Freelancer",
       description: [
         "Developed custom web applications for enterprise clients",
         "Optimized database queries improving application performance by 35%",
         "Integrated payment systems and implemented security best practices",
         "Provided technical consultation and code architecture recommendations"
       ],
-      technologies: ["Angular", "C#", ".NET Core", "SQL Server", "Azure"]
+      technologies: ["React", "Node.js", "Python", "Angular", "C#", ".NET Core", "SQL Server", "Azure"]
     },
  
   ];

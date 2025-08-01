@@ -154,7 +154,7 @@ const Index = () => {
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
-              <div className="absolute inset-0 bg-gradient-to-t from-green-500/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-800/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-xl font-semibold text-white mb-2">Featured Project | E-Commerce Platform</h3>
                 <p className="text-gray-200 text-sm">Full-stack application with real-time features</p>
