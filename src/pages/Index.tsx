@@ -9,6 +9,7 @@ import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import TechStack from "@/components/TechStack";
 
 const Index = () => {
   return (
@@ -144,22 +145,26 @@ const Index = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="relative mx-auto max-w-5xl mt-20"
         >
-          {/* <div className="glass rounded-xl overflow-hidden group">
+          <div className="glass rounded-xl overflow-hidden group">
             <div className="relative">
               <img
                 src="/lovable-uploads/c32c6788-5e4a-4fee-afee-604b03113c7f.png"
                 alt="Featured Project - Dashboard Interface"
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
+              <div className="absolute inset-0 bg-gradient-to-t from-green-500/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-xl font-semibold text-white mb-2">E-Commerce Platform</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Featured Project | E-Commerce Platform</h3>
                 <p className="text-gray-200 text-sm">Full-stack application with real-time features</p>
               </div>
             </div>
-          </div> */}
+          </div>
         </motion.div>
       </motion.section>
+
+      {/* Tech Stack */}
+      <TechStack />
 
       {/* About Section */}
       <AboutSection />
