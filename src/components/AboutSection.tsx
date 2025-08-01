@@ -95,7 +95,7 @@ const AboutSection = () => {
             <div className="glass rounded-xl p-8 text-center">
                   <div className="w-48 h-48 mx-auto bg-gradient-to-br from-primary/20 to-[#22c55e]/20 rounded-full flex items-center justify-center mb-6 overflow-hidden">
                     <img
-                      src="http://www.chanakaeshan.me/assets/home_.jpg"
+                      src="https://drive.google.com/file/d/143OuVKIUSLKtb5kHxnM-Pijs0MNf-9jI/view?usp=sharing"
                       alt="Chanaka Eshan"
                       className="w-full h-full object-cover"
                     />
