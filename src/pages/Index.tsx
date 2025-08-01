@@ -88,11 +88,13 @@ const Index = () => {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 items-start mb-12"
           >
-            <Button size="lg" className="button-gradient group">
-              <Mail className="w-4 h-4 mr-2" />
-              Get In Touch
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href="#contact">
+              <Button size="lg" className="button-gradient group">
+                <Mail className="w-4 h-4 mr-2" />
+                Get In Touch
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
             <a
                href="https://drive.google.com/uc?export=download&id=1A2B3C4D5E6F7G8H9"
                 target="_blank"
