@@ -81,7 +81,7 @@ const Index = () => {
             className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left leading-relaxed"
           >
             I craft exceptional digital experiences through clean code and innovative solutions.{" "}
-            <span className="text-white">Specialized in Java, React, Node.js, and cloud architecture.</span>
+            <span className="text-white">Specialized in Java, React, Node.js, Python and cloud architecture.</span>
           </motion.p>
           
           <motion.div
