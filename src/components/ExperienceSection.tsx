@@ -161,7 +161,7 @@ const ExperienceSection = () => {
         </motion.div>
 
         {/* Download Resume CTA */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -177,7 +177,7 @@ const ExperienceSection = () => {
               Download Resume (PDF)
             </button>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

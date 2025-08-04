@@ -6,41 +6,23 @@ import { Card } from "./ui/card";
 
 const testimonials = [
   {
-    name: "Michael Chen",
-    role: "Professional Trader",
-    image: "https://avatars.githubusercontent.com/u/1234567?v=4",
-    content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me peace of mind."
+    name: "Gayan Sudeera",
+    role: "Owner of Serene Lanka travel",
+    image: "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-1/412190073_1309373410464053_3674242885806527523_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_ohc=BXA-Xd4qQ-EQ7kNvwGF5Y17&_nc_oc=Adl-oPufOovs2-ELOWcO87IzFvomd-LzMSkNTJqYIGVV4L0hdjm_oZApuI9bgvyoF1g&_nc_zt=24&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=FhMaNX1zG1ID5YsN_Rs54g&oh=00_AfX04lSiAC4drqDJMuYcGk52zqdQHzwS1xeoklbaOWZjCQ&oe=689637D1",
+    content: "Chanaka gave us the precise tactic we were lacking.  Although our brand awareness was a significant obstacle, their astute and innovative ideas resulted in a significant increase in interaction."
   },
   {
-    name: "Sarah Johnson",
-    role: "Crypto Fund Manager",
-    image: "https://avatars.githubusercontent.com/u/2345678?v=4",
-    content: "CryptoTrade's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours."
+    name: "Gayan Sudeera",
+    role: "Owner of Serene Lanka travel",
+    image: "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-1/412190073_1309373410464053_3674242885806527523_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_ohc=BXA-Xd4qQ-EQ7kNvwGF5Y17&_nc_oc=Adl-oPufOovs2-ELOWcO87IzFvomd-LzMSkNTJqYIGVV4L0hdjm_oZApuI9bgvyoF1g&_nc_zt=24&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=FhMaNX1zG1ID5YsN_Rs54g&oh=00_AfX04lSiAC4drqDJMuYcGk52zqdQHzwS1xeoklbaOWZjCQ&oe=689637D1",
+    content: "Chanaka gave us the precise tactic we were lacking.  Although our brand awareness was a significant obstacle, their astute and innovative ideas resulted in a significant increase in interaction."
   },
   {
-    name: "David Wilson",
-    role: "Early Crypto Investor",
-    image: "https://avatars.githubusercontent.com/u/3456789?v=4",
-    content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A game-changer for both beginners and pros."
+    name: "Gayan Sudeera",
+    role: "Owner of Serene Lanka travel",
+    image: "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-1/412190073_1309373410464053_3674242885806527523_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_ohc=BXA-Xd4qQ-EQ7kNvwGF5Y17&_nc_oc=Adl-oPufOovs2-ELOWcO87IzFvomd-LzMSkNTJqYIGVV4L0hdjm_oZApuI9bgvyoF1g&_nc_zt=24&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=FhMaNX1zG1ID5YsN_Rs54g&oh=00_AfX04lSiAC4drqDJMuYcGk52zqdQHzwS1xeoklbaOWZjCQ&oe=689637D1",
+    content: "Chanaka gave us the precise tactic we were lacking.  Although our brand awareness was a significant obstacle, their astute and innovative ideas resulted in a significant increase in interaction."
   },
-  {
-    name: "Emily Zhang",
-    role: "DeFi Developer",
-    image: "https://avatars.githubusercontent.com/u/4567890?v=4",
-    content: "We've seen remarkable improvements in our trading efficiency since switching to CryptoTrade. The smart order routing and liquidity aggregation are particularly impressive."
-  },
-  {
-    name: "James Rodriguez",
-    role: "Crypto Security Expert",
-    image: "https://avatars.githubusercontent.com/u/5678901?v=4",
-    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed."
-  },
-  {
-    name: "Lisa Thompson",
-    role: "Portfolio Manager",
-    image: "https://avatars.githubusercontent.com/u/6789012?v=4",
-    content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management."
-  }
 ];
 
 const TestimonialsSection = () => {
@@ -54,9 +36,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-normal mb-4">Trusted by Traders</h2>
+          <h2 className="text-5xl font-normal mb-4">Trusted Customers</h2>
           <p className="text-muted-foreground text-lg">
-            Join thousands of satisfied traders on CryptoTrade
+            We have satisfied Customers who trust us with their business
           </p>
         </motion.div>
 

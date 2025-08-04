@@ -152,9 +152,10 @@ const Footer = () => {
                 {/* using React & TypeScript. */}
               </p>
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <span>Last updated: {new Date().toLocaleDateString()}</span>
+                {/* <span>Last updated: {new Date().toLocaleDateString()}</span>
                 <span>•</span>
-                <span>Version 2.0</span>
+                <span>Version 2.0</span> */}
+                <span>We Living Life 🍉</span>
               </div>
             </div>
           </div>
