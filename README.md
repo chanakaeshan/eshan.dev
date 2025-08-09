@@ -1,69 +1,82 @@
-# Welcome to your Lovable project
+# eshan.dev
 
-## Project info
+Welcome to the **eshan.dev** repository! This project is maintained by [@chanakaeshan](https://github.com/chanakaeshan).
 
-**URL**: https://lovable.dev/projects/92dc0c12-c831-4ed8-9ab7-0f875920f45d
+## Overview
 
-## How can I edit this code?
+This repository contains the source code and configuration for the personal portfolio and development site of Chanaka Eshan. The site showcases professional experience, projects, blog posts, and technical skills.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- Portfolio of projects
+- Blog and articles
+- Contact information
+- Responsive, modern design
+- Built with modern web technologies
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/92dc0c12-c831-4ed8-9ab7-0f875920f45d) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+To get a local copy up and running, follow these simple steps.
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- [Node.js](https://nodejs.org/) (version 16+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chanakaeshan/eshan.dev.git
+   cd eshan.dev
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+4. Open your browser and visit `http://localhost:3000`.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Deployment
 
-# Step 3: Install the necessary dependencies.
-npm i
+For Vercel
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Push your latest code to the `main` branch.
+2. Connect your repo to [Vercel](https://vercel.com/) and deploy.
+
+## Folder Structure
+
+```
+├── public/         # Static assets
+├── src/            # Main source code
+├── components/     # Reusable UI components
+├── pages/          # Application pages
+├── styles/         # Global and component styles
+└── README.md
 ```
 
-**Edit a file directly in GitHub**
+## Contributing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Contributions are welcome! Please open an issue or submit a pull request with your suggestions or improvements.
 
-**Use GitHub Codespaces**
+## License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is licensed under the [MIT License](LICENSE).
 
-## What technologies are used for this project?
+## Contact
 
-This project is built with .
+- Portfolio: [eshan.dev](https://chanakaeshan.me/)
+- GitHub: [@chanakaeshan](https://github.com/chanakaeshan)
+- Email: [chanakaeshan@gmail.com](mailto:chanueshan291@gmail.com)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/92dc0c12-c831-4ed8-9ab7-0f875920f45d) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Thank you for visiting the repository!
