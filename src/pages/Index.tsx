@@ -13,6 +13,7 @@ import TechStack from "@/components/TechStack";
 import Technologies from "@/components/Technologies";
 import { PricingSection } from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import Destinations from "@/components/Destinations";
 
 function scrollToSection(sectionId: string) {
   const el = document.getElementById(sectionId);
@@ -196,7 +197,9 @@ const Index = () => {
 
       {/* Pricing Section */}
       <PricingSection />
-      
+
+      {/* <Destinations /> */}
+
       {/* CTA Section */}
       <section className="container px-4 py-20 relative bg-black">
         <div 
