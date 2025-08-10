@@ -7,16 +7,14 @@ import { useIsMobile } from "../hooks/use-mobile";
 const destinations = [
   {
     id: 1,
-    title: "Cultural Triangle Adventure",
-    brand: "Ancient Kingdoms",
-    description: "Explore Sri Lanka's ancient kingdoms and UNESCO World Heritage sites. Experience the rich history and architectural marvels of our ancestors.",
-    tags: ["Cultural", "Heritage", "History", "UNESCO Sites"],
+    title: "Meme Media",
+    brand: "Where Creativity Meets Opportunity",
+    description: "Attention all freelancers and content creators! We're excited to unveil the Memo Media Marketplace, your gateway to a world of creative opportunities and projects.",
+    tags: ["Logo Design", "Social Media Graphics", "Brochures & Flyers", "Web Banners"],
     imageUrl: "/lovable-uploads/93ab0638-8190-4ccf-897f-21fda7f4f5ad.png",
     isFeatured: true,
-    link: "/destinations/cultural-triangle",
-    details: `
-      Journey through Sri Lanka's Cultural Triangle, home to ancient kingdoms that ruled the island for over 1,500 years. This carefully curated adventure takes you through three UNESCO World Heritage sites: the sacred city of Anuradhapura, the medieval capital of Polonnaruwa, and the iconic Sigiriya Rock Fortress. Experience the rich Buddhist heritage, marvel at architectural wonders, and immerse yourself in the stories of ancient royalty.
-    `
+    link: "https://www.facebook.com/mememedia291",
+ 
   },
   {
     id: 2,
@@ -125,7 +123,7 @@ const Destinations = () => {
     return "scale-90 opacity-0";
   };
   
-  return <section id="destinations" ref={destinationsRef} className="bg-gradient-to-br from-background via-background/95 to-primary/5 py-[50px] w-full">
+  return <section id="destinations" ref={destinationsRef} className="bg-black py-[50px] w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className={`text-center mb-10 max-w-3xl mx-auto transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* <div className="inline-block mb-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">

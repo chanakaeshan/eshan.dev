@@ -198,7 +198,7 @@ const Index = () => {
       {/* Pricing Section */}
       <PricingSection />
 
-      {/* <Destinations /> */}
+      <Destinations />
 
       {/* CTA Section */}
       <section className="container px-4 py-20 relative bg-black">

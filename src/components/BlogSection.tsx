@@ -71,7 +71,7 @@ const BlogSection = () => {
   const categories = ['All', 'Web Development', 'Design Systems', 'TypeScript', 'Accessibility', 'Performance'];
 
   return (
-    <section id="blog" className="py-20 bg-secondary/30">
+    <section id="blog" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
