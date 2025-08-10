@@ -36,7 +36,8 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-normal mb-4">Trusted Customers</h2>
+          <h2 className="text-5xl font-normal mb-4">
+            <span className="text-green-400">Trusted</span> Customers</h2>
           <p className="text-muted-foreground text-lg">
             We have satisfied Customers who trust us with their business
           </p>
