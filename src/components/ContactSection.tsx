@@ -252,7 +252,7 @@ const ContactSection = () => {
           <div className="glass rounded-xl p-6 max-w-2xl mx-auto">
             <p className="text-muted-foreground">
               <span className="text-primary font-medium">Quick Response:</span> I typically respond to messages within 24 hours. 
-              For urgent matters, feel free to reach out directly via Phone or LinkedIn.
+              For urgent matters, feel free to reach out directly via Phone (WhatsApp) or LinkedIn.
             </p>
           </div>
 
