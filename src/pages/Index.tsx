@@ -225,7 +225,7 @@ const Index = () => {
           </p>
           <Button onClick={() => scrollToSection('contact')} size="lg" className="button-gradient">
             Connect with me
-            <ArrowRight className="ml-2 w-4 h-4" />
+            {/* <ArrowRight className="ml-2 w-4 h-4" /> */}
           </Button>
         </motion.div>
       </section>
