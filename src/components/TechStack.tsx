@@ -12,7 +12,7 @@ const TechStack = () => {
   const extendedLogos = [...logos, ...logos, ...logos];
 
   return (
-    <div className="w-full overflow-hidden bg-background/00 backdrop-blur-sm py-12 mt-20">
+    <div className="w-full overflow-hidden bg-background/00 backdrop-blur-sm py-12 mt-20 max-w-7xl mx-auto px-4">
       <motion.div 
         className="flex space-x-16"
         initial={{ opacity: 0, x: "0%" }}
