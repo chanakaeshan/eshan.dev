@@ -9,8 +9,8 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <Code2 className="w-5 h-5 text-primary" />
-                <h3 className="font-medium text-lg">Eshan.dev</h3>
+                {/* <Code2 className="w-5 h-5 text-primary" /> */}
+                <h3 className="font-medium text-lg">Esh🐬</h3>
               </div>
               <p className="text-sm text-muted-foreground">
                 Full-stack software engineer crafting exceptional digital experiences with modern technologies.
