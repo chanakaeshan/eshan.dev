@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import AboutSection from "@/components/AboutSection";
@@ -131,7 +131,8 @@ const Index = () => {
             {[
               { icon: Github, href: "https://github.com/chanakaeshan", label: "GitHub" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/chanakaeshan/", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:chanueshan291@gmail.com", label: "Email" }, // use mailto for email
+              { icon: Youtube, href: "https://www.youtube.com/@eshgo", label: "YouTube" },
+              { icon: Mail, href: "mailto:chanueshan291@gmail.com", label: "Email" },
             ].map((social) => (
               <motion.a
                 key={social.label}
