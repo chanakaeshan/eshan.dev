@@ -1,7 +1,11 @@
-import { motion } from "framer-motion";
-import { Building2, Calendar, MapPin } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ExperienceSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ticking = useRef(false);
+
   const experiences = [
     {
       id: 1,
@@ -14,9 +18,10 @@ const ExperienceSection = () => {
         "Led development of microservices architecture serving 1M+ daily active users",
         "Mentored junior developers and established code review best practices",
         "Reduced system latency by 40% through performance optimization initiatives",
-        "Collaborated with product team to define technical requirements and roadmap"
+        "Collaborated with product team to define technical requirements and roadmap",
       ],
-      technologies: ["React", "Node.js", "AWS", "Kubernetes", "PostgreSQL"]
+      technologies: ["React", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
+      backgroundImage: "/experience1.jpg",
     },
     {
       id: 2,
@@ -29,9 +34,10 @@ const ExperienceSection = () => {
         "Built and deployed scalable web applications from concept to production",
         "Implemented CI/CD pipelines reducing deployment time by 60%",
         "Developed RESTful APIs and integrated third-party services",
-        "Participated in agile development process with cross-functional teams"
+        "Participated in agile development process with cross-functional teams",
       ],
-      technologies: ["Vue.js", "Python", "Docker", "MongoDB", "Redis"]
+      technologies: ["Vue.js", "Python", "Docker", "MongoDB", "Redis"],
+      backgroundImage: "/experience2.jpg",
     },
     {
       id: 3,
@@ -44,142 +50,183 @@ const ExperienceSection = () => {
         "Developed custom web applications for enterprise clients",
         "Optimized database queries improving application performance by 35%",
         "Integrated payment systems and implemented security best practices",
-        "Provided technical consultation and code architecture recommendations"
+        "Provided technical consultation and code architecture recommendations",
       ],
-      technologies: ["React", "Node.js", "Python", "Angular", "C#", ".NET Core", "SQL Server", "Azure"]
+      technologies: [
+        "React",
+        "Node.js",
+        "Python",
+        "Angular",
+        "C#",
+        ".NET Core",
+        "SQL Server",
+        "Azure",
+      ],
+      backgroundImage: "/experience3.jpg",
     },
- 
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
+  const highlightColor = "#4ADE80"; // bright green
+
+  // Card style with wider width
+  const cardStyle = {
+    height: "60vh",
+    maxHeight: "400px",
+    width: "80vw",
+    maxWidth: "700px",
+    borderRadius: "20px",
+    transition:
+      "transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)",
+    willChange: "transform, opacity",
+    overflow: "hidden",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+    color: "white",
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6 }
-    }
-  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    const handleScroll = () => {
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          if (!sectionRef.current) return;
+
+          const rect = sectionRef.current.getBoundingClientRect();
+          const vh = window.innerHeight;
+          const totalScroll = vh * 2;
+
+          let progress = 0;
+          if (rect.top <= 0) {
+            progress = Math.min(1, Math.max(0, Math.abs(rect.top) / totalScroll));
+          }
+
+          if (progress >= 0.66) setActiveIndex(2);
+          else if (progress >= 0.33) setActiveIndex(1);
+          else setActiveIndex(0);
+
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
   return (
-    <section id="experience" className="container px-4 py-20 relative bg-black">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-4xl mx-auto"
+    <div ref={sectionRef} className="relative" style={{ height: "300vh" }}>
+      <section
+        id="experience"
+        className="sticky top-0 h-screen bg-black py-10 px-6 flex flex-col justify-center overflow-hidden"
       >
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Professional <span className="text-gradient">Experience</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My journey through various roles and companies, building scalable solutions and growing as a developer
-          </p>
-        </div>
+        <div className="max-w-6xl mx-auto flex flex-col h-full"> {/* wider container */}
+            <div className="mb-10 mt-12 text-center">
+                  <h2
+                    className="text-4xl md:text-5xl font-bold mb-2 font-display"
+                    style={{ color: "" }}
+                  >
+                    Professional{" "}
+                    <span style={{ color: highlightColor }}>Experience</span>
+                  </h2>
+                  <p className="text-muted-foreground max-w-xl mx-auto text-lg text-gray-00">
+                    My journey through various roles and companies, building scalable
+                    solutions and growing as a developer
+                  </p>
+                </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="relative"
-        >
-          {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary to-transparent hidden md:block" />
+          <div className="relative flex-1 perspective-1000">
+            {experiences.map((exp, i) => {
+              const isActive = i === activeIndex;
+              const isVisible = i <= activeIndex;
 
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={exp.id}
-                variants={itemVariants}
-                className="relative"
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-black z-10 hidden md:block" />
-                
-                <div className="md:ml-16 glass rounded-xl p-6 group hover:bg-white/10 transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+              return (
+                <div
+                  key={exp.id}
+                  className={`absolute rounded-2xl shadow-xl transition-all duration-500`}
+                  style={{
+                    ...cardStyle,
+                    left: "50%",
+                    top: 0,
+                    right: "auto",
+                    bottom: "auto",
+                    zIndex: 10 + i * 10,
+                    opacity: isVisible ? 1 : 0,
+                    pointerEvents: isVisible ? "auto" : "none",
+                    transform: isVisible
+                      ? `translate(-50%, ${isActive ? 20 : 60 - i * 10}px) scale(${
+                          isActive ? 1 : 0.9
+                        })`
+                      : "translate(-50%, 200px) scale(0.9)",
+                    // backgroundImage: `linear-gradient(to bottom, ${highlightColor}cc, rgba(0,0,0,0.9)), url(${exp.backgroundImage})`,
+                    // backgroundImage: `linear-gradient(to bottom, rgba(252,77,10,0.7), rgba(0,0,0,0.9)), url(${exp.backgroundImage})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(0,64,48,1), rgba(0,64,48,1)), url(${exp.backgroundImage})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundBlendMode: "overlay",
+                    color: "white",
+                  }}
+                >
+                  <div className="p-6 flex flex-col h-full justify-between">
                     <div>
-                      <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
-                        {exp.title}
-                      </h3>
-                      <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                        <Building2 className="w-4 h-4" />
-                        <span className="font-medium">{exp.company}</span>
-                        <span className="text-primary">•</span>
-                        <span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">
-                          {exp.type}
+                      <h3 className="text-3xl font-semibold mb-2">{exp.title}</h3>
+                      <p className="text-xl mb-1 font-medium">{exp.company}</p>
+                      <div className="flex gap-3 text-sm text-gray-300 mb-3">
+                        <span>{exp.location}</span>
+                        <span>•</span>
+                        <span>{exp.duration}</span>
+                        <span>•</span>
+                        <span>{exp.type}</span>
+                      </div>
+
+                      <ul className="list-disc list-inside space-y-2 text-gray-300">
+                        {exp.description.map((desc, idx) => (
+                          <li key={idx}>{desc}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {exp.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-sm"
+                          style={{
+                            transition: "background-color 0.3s, color 0.3s",
+                          }}
+                          onMouseEnter={(e) => {
+                            (e.currentTarget.style.backgroundColor = highlightColor + "33");
+                            (e.currentTarget.style.color = highlightColor);
+                          }}
+                          onMouseLeave={(e) => {
+                            (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.2)");
+                            (e.currentTarget.style.color = "white");
+                          }}
+                        >
+                          {tech}
                         </span>
-                      </div>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <MapPin className="w-3 h-3" />
-                          <span>{exp.location}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3" />
-                          <span>{exp.duration}</span>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
-
-                  <ul className="space-y-2 mb-6">
-                    {exp.description.map((item, idx) => (
-                      <li key={idx} className="text-muted-foreground flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm hover:bg-primary/10 hover:text-primary transition-colors"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
-        </motion.div>
-
-        {/* Download Resume CTA */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <div className="glass rounded-xl p-8">
-            <h3 className="text-xl font-semibold mb-4">Interested in my full background?</h3>
-            <p className="text-muted-foreground mb-6">
-              Download my resume for a comprehensive overview of my experience, education, and achievements.
-            </p>
-            <button className="button-gradient px-6 py-3 rounded-full font-medium transition-opacity hover:opacity-90">
-              Download Resume (PDF)
-            </button>
-          </div>
-        </motion.div> */}
-      </motion.div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 };
 
