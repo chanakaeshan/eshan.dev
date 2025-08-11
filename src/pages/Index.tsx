@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, Mail, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,16 @@ function scrollToSection(sectionId: string) {
 }
 
 const Index = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//code.tidio.co/dl1p8bzodtg2fr0brlnxdub8govqu0av.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-foreground">
       <Navigation />
@@ -128,7 +139,7 @@ const Index = () => {
             transition={{ delay: 0.6 }}
             className="flex gap-4"
           >
-            {[
+            {[ 
               { icon: Github, href: "https://github.com/chanakaeshan", label: "GitHub" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/chanakaeshan/", label: "LinkedIn" },
               { icon: Youtube, href: "https://www.youtube.com/@eshgo", label: "YouTube" },
@@ -164,7 +175,6 @@ const Index = () => {
                 alt="Featured Project - Dashboard Interface"
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-green-800/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-xl font-semibold text-white mb-2">Featured Project | E-Commerce Platform</h3>
