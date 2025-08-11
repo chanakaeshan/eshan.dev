@@ -70,7 +70,7 @@ const ExperienceSection = () => {
 
   // Card style with wider width
   const cardStyle = {
-    height: "60vh",
+    height: "50vh",
     maxHeight: "400px",
     width: "80vw",
     maxWidth: "700px",
