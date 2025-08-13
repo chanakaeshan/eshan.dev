@@ -61,7 +61,7 @@ export const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-lg text-gray-400"
+          className="text-lg text-cyan-50"
         >
           Select the perfect plan with advanced features and competitive fees
         </motion.p>

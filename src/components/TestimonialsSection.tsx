@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
         >
           <h2 className="text-5xl font-normal mb-4">
             <span className="text-green-400">Trusted</span> Customers</h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-cyan-50 text-lg">
             We have satisfied Customers who trust us with their business
           </p>
         </motion.div>

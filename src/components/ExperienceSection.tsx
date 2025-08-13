@@ -141,7 +141,7 @@ const ExperienceSection = () => {
                     Professional{" "}
                     <span style={{ color: highlightColor }}>Experience</span>
                   </h2>
-                  <p className="text-muted-foreground max-w-xl mx-auto text-lg text-gray-00">
+                  <p className="text-muted-foreground text-cyan-50 max-w-xl mx-auto text-lg text-gray-00">
                     My journey through various roles and companies, building scalable
                     solutions and growing as a developer
                   </p>

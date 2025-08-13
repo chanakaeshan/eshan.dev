@@ -82,7 +82,7 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Let's <span className="text-gradient">Connect</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-cyan-50 text-muted-foreground max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations. 
             Let's discuss how we can work together to bring your ideas to life.
           </p>

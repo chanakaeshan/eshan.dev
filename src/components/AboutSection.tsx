@@ -29,7 +29,7 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             About <span className="text-gradient">Me</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-cyan-50 text-muted-foreground max-w-2xl mx-auto">
             Passionate software engineer with 1+ year of experience building scalable applications
           </p>
         </div>

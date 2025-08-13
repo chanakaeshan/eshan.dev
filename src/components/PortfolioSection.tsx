@@ -78,7 +78,7 @@ const PortfolioSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-cyan-50 text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work and personal projects that demonstrate my technical skills and problem-solving abilities
           </p>
         </div>
