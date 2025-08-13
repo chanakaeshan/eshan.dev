@@ -20,13 +20,13 @@ const TechStack = () => {
       >
         <motion.div
           initial={{ x: 0 }}
-          animate={{ x: ["0%", "-50%"] }} // Keyframes for smoothness
+          animate={{ x: ["0%", "-50%"] }}
           transition={{
             x: {
               duration: 20,
               repeat: Infinity,
               ease: "linear",
-              delay: 0.3 // small pause before starting
+              delay: 0.3 
             }
           }}
           style={{

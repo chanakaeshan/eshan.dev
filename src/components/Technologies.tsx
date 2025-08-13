@@ -40,11 +40,8 @@ const TechStack = () => {
   <div className="w-full overflow-hidden py-8 mt-8">
     <motion.div
       className="flex space-x-16"
-      initial={{ opacity: 0, x: "0%" }}
-      animate={{
-        opacity: 1,
-        x: "-30%",
-      }}
+      initial={{ x: 0 }}
+      animate={{ x: ["0%", "-50%"] }}
       transition={{
         opacity: { duration: 0.5 },
         x: {
