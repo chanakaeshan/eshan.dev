@@ -130,7 +130,7 @@ const ExperienceSection = () => {
     <div ref={sectionRef} className="relative" style={{ height: "300vh" }}>
       <section
         id="experience"
-        className="sticky top-0 h-screen bg-black py-10 px-6 flex flex-col justify-center overflow-hidden"
+        className="sticky top-0 h-screen py-10 px-6 flex flex-col justify-center overflow-hidden"
       >
         <div className="max-w-6xl mx-auto flex flex-col h-full"> {/* wider container */}
             <div className="mb-10 mt-12 text-center">

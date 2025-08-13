@@ -70,7 +70,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="container px-4 py-20 relative bg-black">
+    <section id="contact" className="container px-4 py-20 relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -258,11 +258,11 @@ const ContactSection = () => {
 
           <div>
                     <div className="mt-20">
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center bg">
             Frequently Asked Questions
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto bg">
             {[
               {
                 question: "What's your typical project timeline?",
@@ -281,7 +281,7 @@ const ContactSection = () => {
                 answer: "Yes! I offer maintenance packages and ongoing support to ensure your project continues to perform optimally after launch."
               }
             ].map((faq, index) => (
-              <Card key={index} className="card-minimal">
+              <Card key={index} className="card-minimal bg-black/50 backdrop-blur-lg border-white/10 hover:border-white/20 transition-all duration-300">
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-foreground mb-3">{faq.question}</h4>
                   <p className="text-sm text-muted-foreground">{faq.answer}</p>

@@ -35,7 +35,12 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-foreground">
+    <div
+      className="min-h-screen text-foreground"
+      style={{
+        background: "linear-gradient(135deg, #000000 0%, #247881 50%, #000000 100%)",
+      }}
+    >
       <Navigation />
       
       {/* Hero Section */}
@@ -244,10 +249,9 @@ const Index = () => {
       <ContactSection />
 
       {/* Footer */}
-      <div className="bg-black">
+      {/* <div className="bg-black"> */}
         <Footer />
       </div>
-    </div>
   );
 };
 
