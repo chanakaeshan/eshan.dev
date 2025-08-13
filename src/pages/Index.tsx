@@ -38,7 +38,7 @@ const Index = () => {
     <div
       className="min-h-screen text-foreground"
       style={{
-        background: "linear-gradient(135deg, #000000 0%, #247881 50%, #000000 100%)",
+        background: "linear-gradient(135deg, #000000 0%, #007965 50%, #000000 100%)",
       }}
     >
       <Navigation />
