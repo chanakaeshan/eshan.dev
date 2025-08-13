@@ -16,10 +16,10 @@ const PortfolioSection = () => {
     },
     {
       id: 2,
-      title: "Sri Lanka Weather App",
-      description: "A modern web application for viewing real-time and forecast weather data tailored for Sri Lanka. Built primarily with TypeScript, this project aims to provide users with accurate, up-to-date weather information through an intuitive and responsive interface",
-      image: "https://private-user-images.githubusercontent.com/78550278/463414379-4590a2f2-f130-441a-87bc-b6ba02f83067.jpeg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ3ODcwOTksIm5iZiI6MTc1NDc4Njc5OSwicGF0aCI6Ii83ODU1MDI3OC80NjM0MTQzNzktNDU5MGEyZjItZjEzMC00NDFhLTg3YmMtYjZiYTAyZjgzMDY3LmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxMFQwMDQ2MzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZGE2YmUxZjU0ZDhlY2IyNjZiZGQ1MDE0ZjkwZDQ3YTJiZDUxZTRmNmI5MjM5NzJmNzgxYmM5NTQyMDg0ODAyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.USTftsYsB8K4NjIy1yOU_iLQpQ43PbaChnM4cSJCo10",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
+      title: "FurniWise",
+      description: "This application could revolutionise the furniture buying experience for customers and streamline the design process for in-store designers.",
+      image: "/lovable-uploads/Screenshot 2025-08-13 112622.png",
+      technologies: ["Java", "SQLite", "JavaFX", "Socket.io"],
       github: "https://github.com/chanakaeshan/sri-lanka-weather",
       live: "#",
       featured: false
