@@ -173,6 +173,8 @@ const ExperienceSection = () => {
                     // backgroundImage: `linear-gradient(to bottom, ${highlightColor}cc, rgba(0,0,0,0.9)), url(${exp.backgroundImage})`,
                     // backgroundImage: `linear-gradient(to bottom, rgba(252,77,10,0.7), rgba(0,0,0,0.9)), url(${exp.backgroundImage})`,
                     backgroundImage: `linear-gradient(to bottom, rgba(0,64,48,1), rgba(0,64,48,1)), url(${exp.backgroundImage})`,
+                    // backgroundImage: `linear-gradient(to bottom, rgba(4,9,17,0.9), rgba(4,9,17,0.9)), url(${exp.backgroundImage})`,
+
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundBlendMode: "overlay",
