@@ -201,7 +201,7 @@ const Index = () => {
       <ExperienceSection />
 
       {/* Blog Section */}
-      <BlogSection />
+      {/* <BlogSection /> */}
 
       {/* Testimonials Section */}
       <TestimonialsSection />
@@ -209,7 +209,7 @@ const Index = () => {
       {/* Pricing Section */}
       <PricingSection />
 
-      <Destinations />
+      {/* <Destinations /> */}
 
       {/* CTA Section */}
       <section className="container px-4 py-20 relative bg-black">
