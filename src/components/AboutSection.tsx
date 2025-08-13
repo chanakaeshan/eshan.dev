@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Globe, Smartphone, Cloud } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
@@ -104,6 +105,31 @@ const AboutSection = () => {
                   <h3 className="text-xl font-semibold mb-2">Chanaka Eshan</h3>
                   <p className="text-muted-foreground">Software & AI/ML Engineer</p>
                   <p className="text-sm text-muted-foreground mt-2">Katunayake, Sri Lanka</p>
+
+                  <div className="flex justify-center gap-6 mt-4">
+    <a
+      href="https://github.com/chanakaeshan"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-primary transition-colors"
+    >
+      <Github size={22} />
+    </a>
+    <a
+      href="https://linkedin.com/in/chanakaeshan"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-primary transition-colors"
+    >
+      <Linkedin size={22} />
+    </a>
+    <a
+      href="mailto:chanakaeshan@example.com"
+      className="text-muted-foreground hover:text-primary transition-colors"
+    >
+      <Mail size={22} />
+    </a>
+  </div>
                 </div>
 
 

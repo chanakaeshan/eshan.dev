@@ -212,7 +212,7 @@ const Index = () => {
       {/* <Destinations /> */}
 
       {/* CTA Section */}
-      <section className="container px-4 py-20 relative bg-black">
+      {/* <section className="container px-4 py-20 relative bg-black">
         <div 
           className="absolute inset-0 opacity-40"
           style={{
@@ -235,10 +235,10 @@ const Index = () => {
           </p>
           <Button onClick={() => scrollToSection('contact')} size="lg" className="button-gradient">
             Connect with me
-            {/* <ArrowRight className="ml-2 w-4 h-4" /> */}
+           
           </Button>
         </motion.div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <ContactSection />
