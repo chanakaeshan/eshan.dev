@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Globe, Smartphone } from "lucide-react";
+import { Code2, Database, Globe, Smartphone, Cloud } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
@@ -7,6 +7,7 @@ const AboutSection = () => {
     { name: "Backend Development", icon: Database, level: 90 },
     { name: "Mobile Development", icon: Smartphone, level: 85 },
     { name: "System Architecture", icon: Code2, level: 88 },
+    { name: "Cloud Computing", icon: Cloud, level: 87 },
   ];
 
   // const technologies = [
