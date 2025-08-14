@@ -43,8 +43,9 @@ const Navigation = () => {
     { name: "About", href: "#about", onClick: () => scrollToSection('about') },
     { name: "Portfolio", href: "#portfolio", onClick: () => scrollToSection('portfolio') },
     { name: "Experience", href: "#experience", onClick: () => scrollToSection('experience') },
-    { name: "Blog", href: "#blog", onClick: () => scrollToSection('blog') },
+    // { name: "Blog", href: "#blog", onClick: () => scrollToSection('blog') },
     { name: "Contact", href: "#contact", onClick: () => scrollToSection('contact') },
+    { name: "Memories", href: "https://memories-clothing.vercel.app/", onClick: () => window.open("https://memories-clothing.vercel.app/", "_blank") },
   ];
 
   return (
