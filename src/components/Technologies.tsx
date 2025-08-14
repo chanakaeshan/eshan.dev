@@ -41,7 +41,7 @@ const TechStack = () => {
     <motion.div
       className="flex space-x-16"
       initial={{ x: 0 }}
-      animate={{ x: ["0%", "-50%"] }}
+      animate={{ x: ["0%", "-30%"] }}
       transition={{
         opacity: { duration: 0.5 },
         x: {
