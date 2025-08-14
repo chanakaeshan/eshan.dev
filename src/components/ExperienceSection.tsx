@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 const ExperienceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isIntersecting, setIsIntersecting] = useState(false);
   const ticking = useRef(false);
 
   const experiences = [
@@ -41,6 +40,30 @@ const ExperienceSection = () => {
     },
     {
       id: 3,
+      title: "Microsoft Ambassador",
+      company: "Microsoft",
+      location: "Microsoft Sri Lanka",
+      duration: "2024 - Present",
+      type: "Full-time",
+      description: [
+        "Developed cloud-native applications leveraging Azure services",
+        "Optimized application performance and scalability",
+        "Integrated Azure DevOps for CI/CD pipelines",
+        "Provided technical guidance and best practices for cloud development",
+      ],
+      technologies: [
+        "Azure",
+        "Docker",
+        "Kubernetes",
+        "Azure DevOps",
+        "GitHub",
+        "Terraform",
+        "CloudFormation",
+      ],
+      backgroundImage: "/experience3.jpg",
+    },
+    {
+      id: 4,
       title: "Software Developer",
       company: "Freelancer",
       location: "Remote",
@@ -62,13 +85,12 @@ const ExperienceSection = () => {
         "SQL Server",
         "Azure",
       ],
-      backgroundImage: "/experience3.jpg",
+      backgroundImage: "/experience4.jpg",
     },
   ];
 
   const highlightColor = "#4ADE80"; // bright green
 
-  // Card style with wider width
   const cardStyle = {
     height: "50vh",
     maxHeight: "400px",
@@ -84,15 +106,6 @@ const ExperienceSection = () => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-
     const handleScroll = () => {
       if (!ticking.current) {
         window.requestAnimationFrame(() => {
@@ -107,9 +120,13 @@ const ExperienceSection = () => {
             progress = Math.min(1, Math.max(0, Math.abs(rect.top) / totalScroll));
           }
 
-          if (progress >= 0.66) setActiveIndex(2);
-          else if (progress >= 0.33) setActiveIndex(1);
-          else setActiveIndex(0);
+          // Dynamic calculation based on number of experiences
+          const totalCards = experiences.length;
+          const newIndex = Math.min(
+            totalCards - 1,
+            Math.floor(progress * totalCards)
+          );
+          setActiveIndex(newIndex);
 
           ticking.current = false;
         });
@@ -122,9 +139,8 @@ const ExperienceSection = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
-  }, []);
+  }, [experiences.length]);
 
   return (
     <div ref={sectionRef} className="relative" style={{ height: "300vh" }}>
@@ -132,25 +148,30 @@ const ExperienceSection = () => {
         id="experience"
         className="sticky top-0 h-screen py-10 px-6 flex flex-col justify-center overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto flex flex-col h-full"> {/* wider container */}
-            <div className="mb-10 mt-12 text-center">
-                  <h2
-                    className="text-4xl md:text-5xl font-bold mb-2 font-display"
-                    style={{ color: "" }}
-                  >
-                    Professional{" "}
-                    <span style={{ color: highlightColor }}>Experience</span>
-                  </h2>
-                  <p className="text-muted-foreground text-cyan-50 max-w-xl mx-auto text-lg text-gray-00">
-                    My journey through various roles and companies, building scalable
-                    solutions and growing as a developer
-                  </p>
-                </div>
+        <div className="max-w-6xl mx-auto flex flex-col h-full">
+          <div className="mb-10 mt-12 text-center">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-2 font-display"
+              style={{ color: "" }}
+            >
+              Professional{" "}
+              <span style={{ color: highlightColor }}>Experience</span>
+            </h2>
+            <p className="text-muted-foreground text-cyan-50 max-w-xl mx-auto text-lg text-gray-00">
+              My journey through various roles and companies, building scalable
+              solutions and growing as a developer
+            </p>
+          </div>
 
           <div className="relative flex-1 perspective-1000">
             {experiences.map((exp, i) => {
               const isActive = i === activeIndex;
               const isVisible = i <= activeIndex;
+
+              // Dynamic spacing
+              const totalCards = experiences.length;
+              const baseOffset = 60;
+              const spacing = baseOffset / totalCards;
 
               return (
                 <div
@@ -160,25 +181,19 @@ const ExperienceSection = () => {
                     ...cardStyle,
                     left: "50%",
                     top: 0,
-                    right: "auto",
-                    bottom: "auto",
                     zIndex: 10 + i * 10,
                     opacity: isVisible ? 1 : 0,
                     pointerEvents: isVisible ? "auto" : "none",
                     transform: isVisible
-                      ? `translate(-50%, ${isActive ? 20 : 60 - i * 10}px) scale(${
-                          isActive ? 1 : 0.9
-                        })`
+                      ? `translate(-50%, ${isActive ? 20 : baseOffset - i * spacing}px) scale(${isActive ? 1.05 : 0.9})`
                       : "translate(-50%, 200px) scale(0.9)",
+                    backgroundImage: `linear-gradient(to bottom, rgba(0,64,48,1), rgba(0,64,48,1)), url(${exp.backgroundImage})`,
                     // backgroundImage: `linear-gradient(to bottom, ${highlightColor}cc, rgba(0,0,0,0.9)), url(${exp.backgroundImage})`,
                     // backgroundImage: `linear-gradient(to bottom, rgba(252,77,10,0.7), rgba(0,0,0,0.9)), url(${exp.backgroundImage})`,
-                    backgroundImage: `linear-gradient(to bottom, rgba(0,64,48,1), rgba(0,64,48,1)), url(${exp.backgroundImage})`,
                     // backgroundImage: `linear-gradient(to bottom, rgba(4,9,17,0.9), rgba(4,9,17,0.9)), url(${exp.backgroundImage})`,
-
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundBlendMode: "overlay",
-                    color: "white",
                   }}
                 >
                   <div className="p-6 flex flex-col h-full justify-between">
@@ -209,12 +224,12 @@ const ExperienceSection = () => {
                             transition: "background-color 0.3s, color 0.3s",
                           }}
                           onMouseEnter={(e) => {
-                            (e.currentTarget.style.backgroundColor = highlightColor + "33");
-                            (e.currentTarget.style.color = highlightColor);
+                            e.currentTarget.style.backgroundColor = highlightColor + "33";
+                            e.currentTarget.style.color = highlightColor;
                           }}
                           onMouseLeave={(e) => {
-                            (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.2)");
-                            (e.currentTarget.style.color = "white");
+                            e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.2)";
+                            e.currentTarget.style.color = "white";
                           }}
                         >
                           {tech}
