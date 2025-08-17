@@ -15,6 +15,7 @@ import Technologies from "@/components/Technologies";
 import { PricingSection } from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Destinations from "@/components/Destinations";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 function scrollToSection(sectionId: string) {
   const el = document.getElementById(sectionId);
@@ -251,6 +252,8 @@ const Index = () => {
       {/* Footer */}
       {/* <div className="bg-black"> */}
         <Footer />
+
+        <BackgroundMusic />
       </div>
   );
 };
