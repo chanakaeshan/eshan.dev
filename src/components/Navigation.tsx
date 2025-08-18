@@ -96,61 +96,44 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Navigation */}
-          {/* Mobile Navigation */}
-<div className="md:hidden">
-  <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-    <SheetTrigger asChild>
-      <Button variant="outline" size="icon" className="glass">
-        <Menu className="h-5 w-5" />
-      </Button>
-    </SheetTrigger>
-    <SheetContent 
-      side="left" 
-      className="bg-[#1B1B1B] text-white w-full h-full p-6 flex flex-col"
-    >
-      {/* Close Button */}
-      <div className="flex justify-end mb-6">
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          ✕
-        </Button>
-      </div>
-
-      {/* Nav Items */}
-      <div className="flex flex-col gap-6 flex-1 overflow-y-auto">
-        {navItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className="text-xl font-medium text-muted-foreground hover:text-white transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsMobileMenuOpen(false);
-              if (item.onClick) item.onClick();
-            }}
-          >
-            {item.name}
-          </a>
-        ))}
-      </div>
-
-      {/* CTA Button */}
-      <Button 
-        onClick={() => {
-          setIsMobileMenuOpen(false);
-          scrollToSection("contact");
-        }}
-        className="button-gradient mt-6 w-full py-6 text-lg"
-      >
-        Get In Touch
-      </Button>
-    </SheetContent>
-  </Sheet>
-</div>
-
+          <div className="md:hidden">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="glass">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="bg-[#1B1B1B]">
+                <div className="flex flex-col gap-4 mt-8">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsMobileMenuOpen(false);
+                        if (item.onClick) {
+                          item.onClick();
+                        }
+                      }}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                  <Button 
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      scrollToSection('contact');
+                    }}
+                    className="button-gradient mt-4"
+                  >
+                    Get In Touch
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </nav>
       </div>
     </header>
